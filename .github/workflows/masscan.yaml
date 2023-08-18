@@ -6,6 +6,7 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    environment: test
     strategy:
       fail-fast: false
       matrix:
