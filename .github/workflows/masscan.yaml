@@ -6,6 +6,10 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        rate: [1000, 5000, 10000, 20000, 30000, 40000, 50000, 100000]
     steps:
       - run: ip a
-      - run: docker run --rm --net host --privileged ilyaglow/masscan 51.91.66.114 -p1-65535 --rate 10000
+      - run: docker run --rm --net host --privileged ilyaglow/masscan 51.91.66.114 -p1-65535 --rate ${{ matrix.rate }} --wait 0
