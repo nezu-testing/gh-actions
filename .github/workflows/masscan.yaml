@@ -1,0 +1,11 @@
+name: masscan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ip a
+      - run: docker run --rm -it --net host --privileged ilyaglow/masscan 51.91.66.114 -p1-65535 --rate 10000
