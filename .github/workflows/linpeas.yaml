@@ -1,0 +1,10 @@
+name: linpeas
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
