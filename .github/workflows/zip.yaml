@@ -7,4 +7,4 @@ jobs:
   test1:
     runs-on: windows-latest
     steps:
-      - run: 7za --version
+      - run: 7z --version
