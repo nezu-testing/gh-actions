@@ -1,0 +1,10 @@
+name: zip
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test1:
+    runs-on: windows-latest
+    steps:
+      - run: zip --version
